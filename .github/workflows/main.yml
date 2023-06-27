@@ -32,7 +32,7 @@ jobs:
         id: OpenAIReview
         uses: jacobBelizario/openaiCodeReview@main
         with:
-          gh_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
           ghurl: ${{ github.repository }}
           anthropic_key: ${{ secrets.ANTHROPIC_API_KEY }}
           diff_code: ${{steps.committed_files.outputs.files}}
